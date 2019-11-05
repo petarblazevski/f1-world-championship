@@ -6,14 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import * as fromContainers from './containers';
 
 @NgModule({
-  declarations: [
-    ...fromContainers.containers
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [...fromContainers.containers],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [fromContainers.AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
