@@ -3,7 +3,7 @@ export interface IDriver {
   permanentNumber: string;
   code: string;
   url: string;
-  driverName: string;
+  givenName: string;
   familyName: string;
   dateOfBirth: string;
   nationality: string;
