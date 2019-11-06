@@ -59,9 +59,9 @@ describe('ApiService', () => {
       expect(series).toEqual('f1');
       expect(StandingsTable.season).toEqual(year.toString(), 'Wrong year retrieved');
       expect(StandingsTable.driverStandings).toEqual('1');
-      expect(StandingsTable.StandingsList.length).toEqual(1);
+      expect(StandingsTable.StandingsLists.length).toEqual(1);
 
-      const driver = StandingsTable.StandingsList[0].DriverStandings[0];
+      const driver = StandingsTable.StandingsLists[0].DriverStandings[0];
 
       expect(driver.position).toEqual('1');
       expect(driver.points).toEqual('98');
