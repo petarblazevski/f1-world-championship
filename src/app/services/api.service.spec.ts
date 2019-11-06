@@ -73,4 +73,8 @@ describe('ApiService', () => {
 
     req.flush(WORLD_CHAMPION);
   });
+
+  afterEach(() => {
+    httpTestingController.verify();
+  });
 });
