@@ -8,6 +8,14 @@ const routes: Routes = [
     path: '',
     component: fromContainers.HomeComponent,
     pathMatch: 'full'
+  },
+  {
+    path: 'results/:year',
+    component: fromContainers.ResultsComponent
+  },
+  {
+    path: '**',
+    redirectTo: '/'
   }
 ];
 
