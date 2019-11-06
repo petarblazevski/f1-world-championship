@@ -14,9 +14,10 @@ import * as fromContainers from './containers';
 import { reducers, metaReducers } from './store';
 import { environment } from '../environments/environment';
 import { ChampionshipEffects } from './store/championship.effects';
+import { IsWorldChampionPipe } from './pipes/is-world-champion.pipe';
 
 @NgModule({
-  declarations: [...fromContainers.containers],
+  declarations: [...fromContainers.containers, IsWorldChampionPipe],
   imports: [
     BrowserModule,
     AppRoutingModule,
