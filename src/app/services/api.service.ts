@@ -15,4 +15,7 @@ export class ApiService {
     return this.http.get<IApiResponse>(`${environment.motorRacingApiEndpoint}/${year}/results/1.json`);
   }
 
+  getWorldChampionByYear(year: number): Observable<IApiResponse> {
+    return this.http.get<IApiResponse>(`${environment.motorRacingApiEndpoint}/${year}/driverStandings/1.json`);
+  }
 }
