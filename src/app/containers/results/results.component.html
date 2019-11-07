@@ -1,5 +1,6 @@
 <a [routerLink]="'/'">Home</a>
 
-<app-results-list [races]="races$ | async" [champion]="champion$ | async"></app-results-list>
-
-
+<app-loading *ngIf="loading$ | async; else showResults"></app-loading>
+<ng-template #showResults>
+  <app-results-list [races]="races$ | async" [champion]="champion$ | async"></app-results-list>
+</ng-template>
