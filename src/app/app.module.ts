@@ -16,11 +16,13 @@ import { reducers, metaReducers } from './store';
 import { environment } from '../environments/environment';
 import { ChampionshipEffects } from './store/championship.effects';
 import { IsWorldChampionPipe } from './pipes/is-world-champion.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [...fromContainers.containers, ...fromComponents.components, IsWorldChampionPipe],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     StoreModule.forRoot(reducers, {

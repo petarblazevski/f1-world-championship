@@ -1,6 +1,7 @@
-<div class="races">
+<div class="races" @races>
   <div
     class="race"
+    @race
     *ngFor="let race of races"
     [ngClass]="{ 'is-world-champion': race.Results[0]?.Driver.driverId | isWorldChampion: champion }"
   >

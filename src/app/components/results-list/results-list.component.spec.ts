@@ -7,6 +7,7 @@ import { DebugElement } from '@angular/core';
 import { RESULTS_DATA } from '../../../data/testResultsData';
 import { IRace } from '../../models/race';
 import { WORLD_CHAMPION } from '../../../data/testFirstPlaceDriverData';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ResultsListComponent', () => {
   let component: ResultsListComponent;
@@ -19,8 +20,8 @@ describe('ResultsListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ResultsListComponent, IsWorldChampionPipe],
-      imports: []
+      imports: [NoopAnimationsModule],
+      declarations: [ResultsListComponent, IsWorldChampionPipe]
     }).compileComponents();
   }));
 
