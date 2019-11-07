@@ -10,6 +10,7 @@ import * as fromStore from '../../store';
 import * as championshipSelectors from '../../store/championship.selectors';
 import * as championshipActions from '../../store/championship.actions';
 import { ActivatedRouteStub } from '../../../testing/activated-route-stub';
+import { ResultsListComponent } from '../../components';
 
 describe('ResultsComponent', () => {
   let component: ResultsComponent;
@@ -26,7 +27,7 @@ describe('ResultsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [ResultsComponent, IsWorldChampionPipe],
+      declarations: [ResultsComponent, IsWorldChampionPipe, ResultsListComponent],
       providers: [
         {
           provide: ActivatedRoute,
