@@ -1,1 +1,10 @@
-<p>results works!</p>
+<a [routerLink]="'/'">Home</a>
+
+<ul>
+  <li
+    *ngFor="let race of races$ | async"
+    [ngClass]="{ 'is-world-champion': race.Results[0]?.Driver.driverId | isWorldChampion: (champion$ | async) }"
+  >
+    {{ race.Circuit.circuitName }}: {{ race.Results[0]?.Driver.givenName }} {{ race.Results[0]?.Driver.familyName }}
+  </li>
+</ul>
