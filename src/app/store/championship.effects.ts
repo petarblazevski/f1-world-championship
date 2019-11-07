@@ -15,7 +15,8 @@ export class ChampionshipEffects {
       ),
       switchMap(([results, champion]) => [
         championshipActions.loadResults({ payload: results }),
-        championshipActions.loadChampion({ payload: champion })
+        championshipActions.loadChampion({ payload: champion }),
+        championshipActions.loadComplete()
       ])
     )
   );

@@ -13,3 +13,8 @@ export const selectChampionshipChampion = createSelector(
   selectChampionshipFeature,
   (state: IState) => state.champion
 );
+
+export const selectChampionshipLoading = createSelector(
+  selectChampionshipFeature,
+  (state: IState) => state.loading
+);
