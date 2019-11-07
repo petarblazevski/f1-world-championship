@@ -1,3 +1,11 @@
+<div class="home-intro">
+  <h1 class="display-4">
+    World Championship Results
+  </h1>
+  <div class="lead">With this app you can see the championships between {{ minYear }} and {{ maxYear }}</div>
+</div>
 <div class="championship-years">
-  <a [routerLink]="'/results/' + year" class="championship-years__year" *ngFor="let year of years">{{ year }}</a>
+  <div class="championship-years__item" *ngFor="let year of years">
+    <a [routerLink]="'/results/' + year" class="championship-years__year">{{ year }}</a>
+  </div>
 </div>
