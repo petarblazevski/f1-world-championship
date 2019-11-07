@@ -10,10 +10,10 @@
 @import 'base/base', 'base/fonts', 'base/typography', 'base/helpers';
 
 // 4. Layout-related sections
-@import 'layout/header', 'layout/footer', 'layout/championship-years', 'layout/home-intro';
+@import 'layout/header', 'layout/footer', 'layout/championship-years', 'layout/home-intro', 'layout/races';
 
 // 5. Components
-@import 'components/button';
+@import 'components/button', 'components/ribbon';
 
 // 6. Page-specific styles
 @import 'pages/home';

@@ -14,6 +14,9 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 /// Formula 1 font family
 $f1-font-stack: 'f1', sans-serif;
 
+/// Base font size
+$font-size-base: 16px;
+
 /// Bootstrap Color Overrides
 $primary: #e10600;
 
@@ -23,7 +26,7 @@ $text-color: rgb(34, 34, 34) !default;
 
 /// Main brand color
 /// @type Color
-$brand-color: rgb(229, 0, 80) !default;
+$brand-color: $primary !default;
 
 /// Navbar background color
 $navbar-bg-color: #1f1f27;

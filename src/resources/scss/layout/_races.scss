@@ -1,0 +1,44 @@
+.races {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.race {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0.625rem 1rem;
+  margin-bottom: 0.625rem;
+
+  border: 1px solid #eee;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.08), 0 4px 4px rgba(0, 0, 0, 0.08);
+
+  &__name {
+    color: $brand-color;
+    @include font-size-rem(18px);
+    font-weight: bold;
+  }
+
+  &__circuit-name {
+    font-size: 1rem;
+  }
+
+  &__statistics {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.statistic {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0.1875rem 1rem;
+  text-align: center;
+
+  &__title {
+    @include font-size-rem(12px);
+    color: $mid-grey;
+  }
+}

@@ -1,0 +1,42 @@
+<div class="races">
+  <div
+    class="race"
+    *ngFor="let race of races"
+    [ngClass]="{ 'is-world-champion': race.Results[0]?.Driver.driverId | isWorldChampion: champion }"
+  >
+    <div class="ribbon" *ngIf="race.Results[0]?.Driver.driverId | isWorldChampion: champion">
+      <span>WORLD CHAMP</span>
+    </div>
+    <div class="race__info">
+      <span class="race__name">
+        {{ race.raceName }}
+      </span>
+      <span class="bullet-point">&nbsp;&bull;&nbsp;</span>
+      <span class="race__circuit-name">{{ race.Circuit.circuitName }} </span>
+    </div>
+    <div class="race__statistics">
+      <div class="statistic">
+        <div class="statistic__title">Round</div>
+        <div class="statistic__content">{{ race.round }}</div>
+      </div>
+      <div class="statistic">
+        <div class="statistic__title">Date</div>
+        <div class="statistic__content">{{ race.date + 'T' + race.time | date: 'MMM d, y, h:mm:ss a' }}</div>
+      </div>
+      <div class="statistic">
+        <div class="statistic__title">Laps</div>
+        <div class="statistic__content">{{ race.Results[0]?.laps }}</div>
+      </div>
+      <div class="statistic">
+        <div class="statistic__title">Winner</div>
+        <div class="statistic__content" data-testid="winner">
+          {{ race.Results[0]?.Driver.givenName }} {{ race.Results[0]?.Driver.familyName }}
+        </div>
+      </div>
+      <div class="statistic">
+        <div class="statistic__title">Status</div>
+        <div class="statistic__content">{{ race.Results[0]?.status }}</div>
+      </div>
+    </div>
+  </div>
+</div>
