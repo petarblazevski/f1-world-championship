@@ -10,7 +10,9 @@ import * as fromStore from '../../store';
 import * as championshipSelectors from '../../store/championship.selectors';
 import * as championshipActions from '../../store/championship.actions';
 import { ActivatedRouteStub } from '../../../testing/activated-route-stub';
-import { ResultsListComponent } from '../../components';
+import { LoadingComponent, ResultsListComponent } from '../../components';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('ResultsComponent', () => {
   let component: ResultsComponent;
@@ -27,7 +29,7 @@ describe('ResultsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [ResultsComponent, IsWorldChampionPipe, ResultsListComponent],
+      declarations: [ResultsComponent, IsWorldChampionPipe, LoadingComponent],
       providers: [
         {
           provide: ActivatedRoute,
@@ -37,7 +39,8 @@ describe('ResultsComponent', () => {
           initialState,
           selectors: [{ selector: championshipSelectors.selectChampionshipLoading, value: false }]
         })
-      ]
+      ],
+      schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
 
