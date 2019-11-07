@@ -1,3 +1,12 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+.navbar {
+  background-color: $navbar-bg-color;
+}
+
+.navbar-text {
+  color: $white;
+  font-family: $f1-font-stack;
+  font-style: italic;
+}

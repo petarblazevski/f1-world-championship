@@ -4,11 +4,15 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: 'Titillium Web', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial',
+  sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// Formula 1 font family
+$f1-font-stack: 'f1', sans-serif;
 
 /// Bootstrap Color Overrides
 $primary: #e10600;
@@ -20,6 +24,9 @@ $text-color: rgb(34, 34, 34) !default;
 /// Main brand color
 /// @type Color
 $brand-color: rgb(229, 0, 80) !default;
+
+/// Navbar background color
+$navbar-bg-color: #1f1f27;
 
 /// Light grey
 /// @type Color

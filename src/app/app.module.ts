@@ -10,6 +10,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { AppRoutingModule } from './app-routing.module';
 import * as fromContainers from './containers';
+import * as fromComponents from './components';
 
 import { reducers, metaReducers } from './store';
 import { environment } from '../environments/environment';
@@ -17,7 +18,7 @@ import { ChampionshipEffects } from './store/championship.effects';
 import { IsWorldChampionPipe } from './pipes/is-world-champion.pipe';
 
 @NgModule({
-  declarations: [...fromContainers.containers, IsWorldChampionPipe],
+  declarations: [...fromContainers.containers, ...fromComponents.components, IsWorldChampionPipe],
   imports: [
     BrowserModule,
     AppRoutingModule,
