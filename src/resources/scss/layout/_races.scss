@@ -27,6 +27,10 @@
   &__statistics {
     display: flex;
     justify-content: space-evenly;
+
+    @include respond-to('small') {
+      flex-direction: column;
+    }
   }
 }
 
